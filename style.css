@@ -35,7 +35,7 @@ body {
 .todo-form__edit-task__label {
     width: 56%;
     display: inline-block;
-    flex-grow: 1
+    flex-grow: 1;
 }
 .todo-form__new-task__wrapper {
     display: flex;
@@ -121,7 +121,7 @@ li > label {
     width: 226px;
 }
 li > input[type="text"] {
-    width: 226px
+    width: 226px;
 }
 button.delete img {
     height: 2em;
@@ -140,7 +140,7 @@ ul#todo-form__completed-tasks label {
 
 /* Edit Task */
 ul li input[type=text] {
-    display: none
+    display: none;
 }
 
 ul li.todo-form__edit-task_mode input[type=text] {
