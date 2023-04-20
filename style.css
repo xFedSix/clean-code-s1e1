@@ -13,7 +13,8 @@ body {
 .eisenhower-matrix img {
     width: 100%;
 }
-.eisenhower-matrix .eisenhower-matrix__link {
+.eisenhower-matrix
+.eisenhower-matrix__link {
     font-family: fantasy, cursive;
 }
 
@@ -44,10 +45,12 @@ ul {
     margin: 0px;
     padding: 0px;
 }
-li, h3 {
+li,
+h3 {
     list-style: none;
 }
-input,button{
+input,
+button{
     outline: none;
 }
 button {
