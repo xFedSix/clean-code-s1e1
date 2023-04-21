@@ -4,45 +4,54 @@ body {
     color: #333;
     font-family: Lato, sans-serif;
 }
-.aaa {
+.eisenhower-matrix {
     width: 500px;
     margin: 0 auto;
     display: block;
     text-align: right;
 }
-.aaa img {
+.eisenhower-matrix img {
     width: 100%;
 }
-.aaa .more_inf {
+.eisenhower-matrix
+.eisenhower-matrix__link {
     font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
-.aaa { text-align: center;
+.eisenhower-matrix {
+    text-align: center;
 }
 }
-.centered-main-page-element {
+.todo-form {
     display: block;
     width: 500px;
     margin: 0 auto 0;
 }
-.task {
+.todo-form__edit-task__input,
+.todo-form__incompleted-task__label,
+.todo-form__completed-task__label,
+.todo-form__incompleted-task__input,
+.todo-form__completed-task__input,
+.todo-form__edit-task__label {
     width: 56%;
     display: inline-block;
-    flex-grow: 1
+    flex-grow: 1;
 }
-.task-row-wrapper {
+.todo-form__new-task__wrapper {
     display: flex;
 }
 ul {
-    margin:0;
+    margin: 0px;
     padding: 0px;
 }
-li, h3 {
-    list-style:none;
+li,
+h3 {
+    list-style: none;
 }
-input,button{
-    outline:none;
+input,
+button{
+    outline: none;
 }
 button {
     background: none;
@@ -58,7 +67,7 @@ button:hover {
 }
 /* Heading */
 h3,
-label[for='new-task'] {
+label[for='todo-form__new-task__label'] {
     color: #333;
     font-weight: 700;
     font-size: 15px;
@@ -84,12 +93,12 @@ input[type="text"]:focus {
 }
 
 /* New Task */
-label[for='new-task'] {
+h3 {
     display: block;
     margin: 0 0 20px;
 }
-input#new-task {
-    width: 318px;
+input#todo-form__new-task__label {
+    width: 420px;
 }
 
 /* Task list */
@@ -97,7 +106,6 @@ li {
     overflow: hidden;
     padding: 20px 0;
     border-bottom: 1px solid #eee;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -115,8 +123,8 @@ li > label {
     font-size: 18px;
     width: 226px;
 }
-li >    input[type="text"] {
-    width: 226px
+li > input[type="text"] {
+    width: 226px;
 }
 button.delete img {
     height: 2em;
@@ -128,21 +136,21 @@ button.delete img:hover {
 }
 
 /* Completed */
-ul#completed-tasks label {
-    text-decoration: line-through
-    color: #888;
+ul#todo-form__completed-tasks label {
+    text-decoration: line-through;
+    text-decoration-color: #888;
 }
 
 /* Edit Task */
 ul li input[type=text] {
-    display:none
+    display: none;
 }
 
-ul li.editMode input[type=text] {
-    display:inline-block;
-    width:224px
+ul li.todo-form__edit-task_mode input[type=text] {
+    display: inline-block;
+    width: 224px
 }
 
-ul li.editMode label {
-    display:none;
+ul li.todo-form__edit-task_mode label {
+    display: none;
 }
