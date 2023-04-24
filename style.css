@@ -34,6 +34,7 @@ body {
 .todo-form__incompleted-task__input,
 .todo-form__completed-task__input,
 .todo-form__edit-task__label {
+    margin: 0 0 0 10px;
     width: 56%;
     display: inline-block;
     flex-grow: 1;
@@ -67,7 +68,7 @@ button:hover {
 }
 /* Heading */
 h3,
-label[for='todo-form__new-task__label'] {
+.todo-form__new-task__label {
     color: #333;
     font-weight: 700;
     font-size: 15px;
@@ -76,20 +77,21 @@ label[for='todo-form__new-task__label'] {
     margin: 0;
     text-transform: uppercase;
 }
-input[type="text"] {
-    margin: 0;
+.todo-form__new-task__input,
+.todo-form__completed-task__input,
+.todo-form__edit-task__input,
+.todo-form__new-task__label,
+.todo-form__incompleted-task__input {
+    margin: 0 0 0 10px;
     font-size: 18px;
     line-height: 18px;
     height: 21px;
-    padding: 0 9px;
+    padding: 0 9px 0 10px;
     border: 1px solid #dDd;
     background: #FFF;
     border-radius: 6px;
     font-family: Lato, sans-serif;
     color: #888;
-}
-input[type="text"]:focus {
-    color: #333;
 }
 
 /* New Task */
@@ -97,7 +99,8 @@ h3 {
     display: block;
     margin: 0 0 20px;
 }
-input#todo-form__new-task__label {
+#todo-form__new-task__label {
+    margin: 0;
     width: 420px;
 }
 
@@ -110,33 +113,17 @@ li {
     justify-content: space-between;
     align-items: center;
 }
-li > * {
-    vertical-align: middle;
-}
-
-li > input[type="checkbox"] {
-    margin: 0 10px;
-}
-li > label {
-    padding-left: 10px;
-    box-sizing: border-box;
-    font-size: 18px;
-    width: 226px;
-}
-li > input[type="text"] {
-    width: 226px;
-}
-button.delete img {
+.delete img {
     height: 2em;
     transform: rotateZ(45deg);
     transition: transform 200ms ease-in;
 }
-button.delete img:hover {
+.delete img:hover {
     transform: rotateZ(0);
 }
 
 /* Completed */
-ul#todo-form__completed-tasks label {
+#todo-form__completed-tasks label {
     text-decoration: line-through;
     text-decoration-color: #888;
 }
@@ -146,11 +133,10 @@ ul li input[type=text] {
     display: none;
 }
 
-ul li.todo-form__edit-task_mode input[type=text] {
+.todo-form__edit-task_mode input[type=text] {
     display: inline-block;
     width: 224px
 }
-
-ul li.todo-form__edit-task_mode label {
+.todo-form__edit-task_mode label {
     display: none;
 }
